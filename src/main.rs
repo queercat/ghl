@@ -106,8 +106,7 @@ fn main() -> Result<(), String> {
         .last()
         .unwrap()
         .as_os_str()
-        .to_str()
-        .unwrap()
+        .to_string_lossy()
         .to_string();
 
     if args.contains(&"--name".to_string()) {
